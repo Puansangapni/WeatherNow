@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather<span>Now</span></h1>
+            <p>Weather information around the world</p>
+        </header>
+
+        <section class="search-section">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Search city..."
+            >
+            <button id="searchBtn">Search</button>
+        </section>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+        <main id="weatherContent" hidden>
+            <section class="current-weather">
+                <div>
+                    <p id="date"></p>
+                    <h2 id="cityName">Jakarta</h2>
+                    <p id="weatherDescription"></p>
+                </div>
+
+                <div class="temperature">
+                    <span id="weatherIcon">☀️</span>
+                    <h1 id="temperature">--°C</h1>
+                </div>
+            </section>
+
+            <section class="weather-details">
+                <div class="detail-card">
+                    <h3>Feels Like</h3>
+                    <p id="feelsLike">--°C</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Humidity</h3>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Wind Speed</h3>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+            </section>
+
+            <section class="forecast-section">
+                <h2>7-Day Forecast</h2>
+                <div id="forecast" class="forecast-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>WeatherNow © 2026 | Powered by Open-Meteo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
